@@ -53,6 +53,11 @@
               background-image: none;
             }
 
+            .slide li::before,
+            .slide pre code:not(:only-child)::before {
+              color: #f1f1f130;
+            }
+
             #cover {
                 display: flex;
                 flex-direction: column;
@@ -298,9 +303,9 @@
         <img src="pictures/google-fonts.png" alt="" style="width: 100%; margin-top: 80px">
     </section>
 
-    <section class="slide" style='font-size: 0.6em'>
+    <section class="slide">
         <h2>Было</h2>
-        <div class="columns two">
+        <div class="columns two" style='font-size: 0.6em'>
             <div class="block">
                 <pre>
                     <code>@font-face {</code>
@@ -325,9 +330,9 @@
             </div>
         </div>
     </section>
-    <section class="slide" style='font-size: 0.6em'>
+    <section class="slide">
         <h2>Было</h2>
-        <div class="columns two">
+        <div class="columns two" style='font-size: 0.6em'>
             <div class="block">
                 <pre>
                     <code>@font-face {</code>
@@ -364,9 +369,9 @@
 
     </style>
 
-    <section class="slide" style='font-size: 0.8em'>
+    <section class="slide">
         <h2>Стало:</h2>
-        <div class="block">
+        <div class="block" style='font-size: 0.8em'>
             <pre>
                 <code>@font-face {</code>
                 <code>  font-family: 'MyFontVF';</code>
