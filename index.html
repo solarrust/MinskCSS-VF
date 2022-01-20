@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='./styles.css'>
     <style>
         .shower {
             --slide-ratio: calc(16 / 9);
@@ -27,14 +28,37 @@
          <h2>А какие варианты?</h2>
         </div>
         <p>Плюсы, минусы, подводные камни</p>
-        <img src="pictures/devfest.png" alt="">
+        <img src="pictures/logo_org_83048.jpg" alt="">
         <style>
+            body {
+              font-family: Zenith, sans-serif;
+            }
+
+            .slide {
+              color: #f1f1f1;
+              background-color: #1471b5;
+            }
+
+            .slide a,
+            .slide h2,
+            .slide p.note {
+              color: #f1f1f1;
+            }
+
+            .slide code, .slide kbd, .slide samp {
+              background-color: #f1f1f130;
+            }
+
+            .slide::after {
+              background-image: none;
+            }
+
             #cover {
                 display: flex;
                 flex-direction: column;
                 justify-content:center;
                 align-items:center;
-                background-color: #202124;
+                background-color: #1471b5;
             }
             .container {
                 position: relative;
@@ -44,7 +68,7 @@
             #cover h2 {
                 color: #f1f1f1;
                 text-align: center;
-                font-family: 'Zenith', sans-serif;
+                font-family: Zenith, sans-serif;
                 font-size: 70px;
                 font-weight: 400;
                 animation: widthChange 8s linear infinite alternate-reverse;
@@ -57,8 +81,8 @@
                 top: -50%;
                 width: 100%;
                 text-align: center;
-                color: #333;
-                font-family: 'Zenith', sans-serif;
+                color: #32aadc;
+                font-family: Zenith, sans-serif;
                 font-size: 70px;
                 font-weight: 400;
                 font-stretch: 20%;
@@ -77,9 +101,9 @@
 
             #cover img {
                 position: absolute;
-                left: 0;
-                top: 0;
-                width: 25%;
+                right: 0;
+                bottom: 0;
+                width: 15%;
             }
             @keyframes widthChange {
                 0% {
@@ -142,7 +166,7 @@
                 margin-bottom: 0.5em;
                 border: 3px solid transparent;
                 border-image-slice: 1;
-                border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+                border-image-source: linear-gradient(45deg, rgba(50,170,220,1) 0%, rgba(242,242,249,1) 50%, rgba(50,170,220,1) 100%);
                 border-radius: 5em;
             }
 
@@ -150,10 +174,6 @@
                 display: none;
             }
         </style>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout"><a href="https://bit.ly/vfomsk">bit.ly/vfomsk</a></h2>
     </section>
 
     <section class="slide">
@@ -219,6 +239,7 @@
                 justify-content: center;
                 height: 3em;
                 font-family: "Inconsolata", monospace;
+                line-height: 1.2;
                 --weight: 200;
                 --stretch: 50%;
                 font-size: 4em;
@@ -230,7 +251,7 @@
             }
 
             .example-range {
-                accent-color: #743ad5;
+                accent-color: #f1f1f1;
                 width: 100%;
                 margin-top: 10px;
                 height: 20px;
@@ -277,7 +298,7 @@
         <img src="pictures/google-fonts.png" alt="" style="width: 100%; margin-top: 80px">
     </section>
 
-    <section class="slide">
+    <section class="slide" style='font-size: 0.6em'>
         <h2>Было</h2>
         <div class="columns two">
             <div class="block">
@@ -304,7 +325,7 @@
             </div>
         </div>
     </section>
-    <section class="slide">
+    <section class="slide" style='font-size: 0.6em'>
         <h2>Было</h2>
         <div class="columns two">
             <div class="block">
@@ -332,7 +353,18 @@
         </div>
     </section>
 
-    <section class="slide">
+    <style>
+      .shower.full .slide pre code:not(:only-child).mark.next {
+        opacity: 0;
+      }
+      .shower.full .slide pre code:not(:only-child).mark.next.active, .shower.full .slide pre code:not(:only-child).mark.next.visited {
+        opacity: 1;
+        background-color: transparent;
+      }
+
+    </style>
+
+    <section class="slide" style='font-size: 0.8em'>
         <h2>Стало:</h2>
         <div class="block">
             <pre>
@@ -424,7 +456,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout shrink" style="font-size: 3em">
+        <h2 class="shout shrink" style="font-size: 2.5em">
             <code>font-variation-settings</code>
         </h2>
     </section>
@@ -514,14 +546,6 @@
 
     <section class="slide">
         <h2 class="shout">Спасибо!</h2>
-    </section>
-
-    <section class="slide">
-      <div style="text-align: center">
-        <img src="pictures/qr.svg" alt="">
-        <p>«Будем рады вашей обратной связи!»</p>
-        <p class="note">Организаторы</p>
-      </div>
     </section>
 
     <div class="progress"></div>
